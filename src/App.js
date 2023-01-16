@@ -1,23 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import FeedbackTitleH1 from 'components/feedback/TitileH1';
+import FeedbackButton from 'components/feedback/Button';
+import FeedbackTitleH2 from 'components/feedback/TitleH2';
+import FeedbackResult from 'components/feedback/Result';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <FeedbackTitleH1 title="Please leave feedback" />
+      <FeedbackButton good="Good" neutral="Neutral" bad="Bad" />
+      <FeedbackTitleH2 title="Statistics" />
+      <FeedbackResult good="Good" neutral="Neutral" bad="Bad" />
     </div>
   );
 }
