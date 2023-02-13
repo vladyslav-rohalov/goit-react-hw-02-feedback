@@ -1,15 +1,18 @@
 import { Buttons } from './FeedbackOptions.styled';
 
-export default function FeedbackOptions({
-  incrementGood,
-  incrementNeutral,
-  incrementBad,
-}) {
+export default function FeedbackOptions({ options, onLeaveFeedback }) {
+  const { good, neutral, bad } = options;
   return (
     <div>
-      <Buttons onClick={incrementGood}>Good</Buttons>
-      <Buttons onClick={incrementNeutral}>Neutral</Buttons>
-      <Buttons onClick={incrementBad}>Bad</Buttons>
+      <Buttons id={good} onClick={onLeaveFeedback}>
+        Good
+      </Buttons>
+      <Buttons id={neutral} onClick={onLeaveFeedback}>
+        Neutral
+      </Buttons>
+      <Buttons id={bad} onClick={onLeaveFeedback}>
+        Bad
+      </Buttons>
     </div>
   );
 }

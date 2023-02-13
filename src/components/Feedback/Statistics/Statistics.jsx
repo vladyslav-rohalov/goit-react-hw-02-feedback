@@ -1,7 +1,13 @@
 import PropTypes from 'prop-types';
 import { Highlights } from './Statistics.styled';
 
-export default function Statistics({ good, neutral, bad, total, positive }) {
+export default function Statistics({
+  good,
+  neutral,
+  bad,
+  total,
+  positivePercentage,
+}) {
   return (
     <div>
       <p>
@@ -17,7 +23,7 @@ export default function Statistics({ good, neutral, bad, total, positive }) {
         Total: <Highlights>{total}</Highlights>
       </p>
       <p>
-        Positive Feedback: <Highlights>{positive}</Highlights>%
+        Positive Feedback: <Highlights>{positivePercentage}</Highlights>%
       </p>
     </div>
   );

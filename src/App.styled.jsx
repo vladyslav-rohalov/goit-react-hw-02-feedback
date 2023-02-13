@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-export const CardStyle = styled.div`
+export const AppStyle = styled.div`
   padding: 20px;
   width: 400px;
   /* border: solid 1px grey; */
